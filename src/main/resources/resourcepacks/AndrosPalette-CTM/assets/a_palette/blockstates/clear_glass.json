@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "": {
+      "model": "a_palette:block/clear_glass"
+    }
+  },
+
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "a_palette:block/clear_glass/clear_glass_ctm/3",
+    "empty": "a_palette:block/clear_glass/clear_glass_ctm/0",
+    "horizontal": "a_palette:block/clear_glass/clear_glass_ctm/2",
+    "particle": "a_palette:block/clear_glass/clear_glass_ctm",
+    "vertical": "a_palette:block/clear_glass/clear_glass_ctm/1"
+  }
+}

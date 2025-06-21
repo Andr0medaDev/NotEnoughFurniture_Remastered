@@ -1,0 +1,23 @@
+modLoader="javafml" #mandatory
+loaderVersion="20," #mandatory
+license="GNU GPLv3"
+
+[[mods]] #mandatory
+modId="not_enough_furniture" #mandatory
+version="0.0.1-1.21.1" #mandatory
+displayName="Not Enough Furniture: Remastered" #mandatory
+authors="Andro" #optional
+description='''Expansive Furniture Mod for Minecraft'''
+
+[[dependencies.not_enough_furniture]] #optional
+modId="neoforge" #mandatory
+type="required" #mandatory
+versionRange="${neo_version_range}" #mandatory
+ordering="NONE"
+side="BOTH"
+[[dependencies.not_enough_furniture]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

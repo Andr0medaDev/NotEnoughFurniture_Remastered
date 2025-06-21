@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "not_enough_furniture:block/oak_chair", "y": 180 },
+    "facing=south": { "model": "not_enough_furniture:block/oak_chair", "y": 0 },
+    "facing=west":  { "model": "not_enough_furniture:block/oak_chair", "y": 90 },
+    "facing=east":  { "model": "not_enough_furniture:block/oak_chair", "y": 270 }
+  }
+}
