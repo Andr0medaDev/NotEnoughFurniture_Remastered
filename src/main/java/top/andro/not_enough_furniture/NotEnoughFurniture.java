@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -18,8 +19,10 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.slf4j.Logger;
+import top.andro.not_enough_furniture.entity.SeatRenderer;
 import top.andro.not_enough_furniture.init.ModBlocks;
 import top.andro.not_enough_furniture.init.ModCreativeModeTabs;
+import top.andro.not_enough_furniture.init.ModEntities;
 import top.andro.not_enough_furniture.init.ModItems;
 
 import java.util.List;
@@ -37,6 +40,7 @@ public class NotEnoughFurniture {
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -57,6 +61,9 @@ public class NotEnoughFurniture {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_CHAIR.get(), RenderType.translucent());
+
+            EntityRenderers.register(ModEntities.SEAT.get(), SeatRenderer::new);
 
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");

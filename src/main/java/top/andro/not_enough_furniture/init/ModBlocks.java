@@ -7,9 +7,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import top.andro.not_enough_furniture.NotEnoughFurniture;
 import top.andro.not_enough_furniture.Reference;
-import top.andro.not_enough_furniture.block.ArtPaletteBlock;
+import top.andro.not_enough_furniture.block.WoodenChairBlock;
 
 import java.util.function.Supplier;
 
@@ -20,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.createBlocks(Reference.MOD_ID);
 
     public static final DeferredBlock<Block> OAK_CHAIR = registerBlock("oak_chair",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(OAK_PLANKS)));
+            () -> new WoodenChairBlock(BlockBehaviour.Properties.ofFullCopy(OAK_PLANKS).noOcclusion()));
 
 
 

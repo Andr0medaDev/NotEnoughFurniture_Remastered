@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.OAK_CHAIR.get()))
                     .title(Component.translatable("creativetab.not_enough_furniture.not_enough_furniture"))
                     .displayItems((itemDisplayParameters, output) -> {
-
+                    output.accept(ModBlocks.OAK_CHAIR);
                     })
                     .build());
     
