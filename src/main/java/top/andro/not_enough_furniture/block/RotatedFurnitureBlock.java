@@ -2,6 +2,7 @@ package top.andro.not_enough_furniture.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -15,41 +16,35 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.Nullable;
 import top.andro.not_enough_furniture.entity.SeatEntity;
 import top.andro.not_enough_furniture.init.ModEntities;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
-public class SittableBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<SittableBlock> CODEC = simpleCodec(SittableBlock::new);
+public abstract class RotatedFurnitureBlock extends HorizontalDirectionalBlock {
 
-    public SittableBlock(Properties properties) {
+    public RotatedFurnitureBlock(Block.Properties properties) {
         super(properties);
+        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if(!level.isClientSide()) {
-            Entity entity = null;
-            List<SeatEntity> entities = level.getEntities(ModEntities.SEAT.get(), new AABB(pos), chair -> true);
-            if(entities.isEmpty()) {
-                entity = ModEntities.SEAT.get().spawn(((ServerLevel) level), pos, MobSpawnType.TRIGGERED);
-            } else {
-                entity = entities.get(0);
-            }
+    public boolean useShapeForLightOcclusion(BlockState state) {
+        return true;
+    }
 
-            player.startRiding(entity);
-        }
-
-        return InteractionResult.SUCCESS;
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    {
+        super.createBlockStateDefinition(builder);
+        builder.add(FACING);
     }
-
-
 }
 

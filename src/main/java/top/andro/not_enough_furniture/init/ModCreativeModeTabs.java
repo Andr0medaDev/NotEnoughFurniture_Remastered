@@ -19,6 +19,16 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.not_enough_furniture.not_enough_furniture"))
                     .displayItems((itemDisplayParameters, output) -> {
                     output.accept(ModBlocks.OAK_CHAIR);
+                    output.accept(ModBlocks.SPRUCE_CHAIR);
+                    output.accept(ModBlocks.BIRCH_CHAIR);
+                    output.accept(ModBlocks.JUNGLE_CHAIR);
+                    output.accept(ModBlocks.ACACIA_CHAIR);
+                    output.accept(ModBlocks.DARK_OAK_CHAIR);
+                    output.accept(ModBlocks.MANGROVE_CHAIR);
+                    output.accept(ModBlocks.CHERRY_CHAIR);
+                    output.accept(ModBlocks.CRIMSON_CHAIR);
+                    output.accept(ModBlocks.WARPED_CHAIR);
+
                     })
                     .build());
     

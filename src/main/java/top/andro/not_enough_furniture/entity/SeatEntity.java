@@ -6,6 +6,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import top.andro.not_enough_furniture.init.ModEntities;
 
 public class SeatEntity extends Entity {
@@ -32,5 +33,10 @@ public class SeatEntity extends Entity {
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
         this.kill();
+    }
+
+    @Override
+    public Vec3 getPassengerRidingPosition(Entity entity) {
+        return new Vec3(position().x, position().y + 0.6, position().z);
     }
 }

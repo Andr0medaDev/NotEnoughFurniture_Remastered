@@ -1,29 +1,18 @@
 
-Installation information
+Not Enough Furniture: ReCrafted
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Not Enough Furniture: ReCrafted is a remake, from scratch, of the old Not Enough Furniture Mod. The Mod is no longer an Addon, it is now its own thing.
+The Mod is also no longer made in MCreator (yay), it has moved to being coded.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Not Enough Furniture: ReCrafted focuses on adding survival friendly furniture to Minecraft. From things like Chairs, Tables, Couches, and more!
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
+Versions
 ============
-The MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+The Mod is currently available for NeoForge 1.21.1, with a Forge 1.20.1 version planned. There are currently no plans to port to other mod loaders/versions.
 
-MDG Legacy:
+Bug Reports & Suggestions
 ==========
-This template uses [ModDevGradle Legacy](https://github.com/neoforged/ModDevGradle). Documentation can be found [here](https://github.com/neoforged/ModDevGradle/blob/main/LEGACY.md).
+The Comments don't work too great for these, fortunately we have channels for both in the [Discord Server](https://discord.gg/nwayG7TQfx)!
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+

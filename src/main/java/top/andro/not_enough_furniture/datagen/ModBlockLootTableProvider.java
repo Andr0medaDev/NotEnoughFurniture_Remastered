@@ -16,6 +16,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.OAK_CHAIR.get());
+        this.dropSelf(ModBlocks.SPRUCE_CHAIR.get());
+        this.dropSelf(ModBlocks.BIRCH_CHAIR.get());
+        this.dropSelf(ModBlocks.JUNGLE_CHAIR.get());
+        this.dropSelf(ModBlocks.ACACIA_CHAIR.get());
+        this.dropSelf(ModBlocks.DARK_OAK_CHAIR.get());
+        this.dropSelf(ModBlocks.MANGROVE_CHAIR.get());
+        this.dropSelf(ModBlocks.CHERRY_CHAIR.get());
+        this.dropSelf(ModBlocks.CRIMSON_CHAIR.get());
+        this.dropSelf(ModBlocks.WARPED_CHAIR.get());
+
+        this.dropSelf(ModBlocks.OAK_TABLE.get());
+        this.dropSelf(ModBlocks.SPRUCE_TABLE.get());
+        this.dropSelf(ModBlocks.BIRCH_TABLE.get());
+        this.dropSelf(ModBlocks.JUNGLE_TABLE.get());
+        this.dropSelf(ModBlocks.ACACIA_TABLE.get());
+        this.dropSelf(ModBlocks.DARK_OAK_TABLE.get());
+        this.dropSelf(ModBlocks.MANGROVE_TABLE.get());
+        this.dropSelf(ModBlocks.CHERRY_TABLE.get());
+        this.dropSelf(ModBlocks.CRIMSON_TABLE.get());
+        this.dropSelf(ModBlocks.WARPED_TABLE.get());
     }
 
 
