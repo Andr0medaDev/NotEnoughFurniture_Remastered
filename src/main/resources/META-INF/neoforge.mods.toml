@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 loaderVersion="20," #mandatory
-license="GNU GPLv3"
+license="MIT"
 
 [[mods]] #mandatory
 modId="not_enough_furniture" #mandatory
